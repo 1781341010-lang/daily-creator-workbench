@@ -1,0 +1,28 @@
+name: 每日创作台数据更新
+on:
+  schedule:
+    - cron: '0 0,6,12 * * *'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 生成数据
+        env:
+          NICHE_KEYWORDS: ${{ vars.NICHE_KEYWORDS || '电脑3C产品,外贸热点' }}
+          PUBLIC_ACCOUNT: ${{ vars.PUBLIC_ACCOUNT || '环球时报GlobalTimes' }}
+        run: python generate.py
+      - name: 提交 data.json
+        run: |
+          git config user.email "bot@github.com"
+          git config user.name "daily-creator"
+          git add data.json
+          git commit -m "每日更新" || echo "无变化"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
