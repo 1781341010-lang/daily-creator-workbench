@@ -1,0 +1,7 @@
+# 登录凭证（含敏感信息，切勿提交）
+cookies_1688.txt
+cookies_alibaba.txt
+
+# Python
+__pycache__/
+*.pyc

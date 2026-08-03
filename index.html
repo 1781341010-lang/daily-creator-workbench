@@ -46,10 +46,10 @@
     position:relative;padding-bottom:calc(20px + var(--safe-b));box-shadow:0 0 50px rgba(0,0,0,.05);}
 
   /* 顶栏 */
-  .topbar{position:sticky;top:0;z-index:40;height:var(--topbar-h);
+  .topbar{position:sticky;top:0;z-index:40;height:calc(var(--topbar-h) + 54px);
     background:rgba(243,245,251,.86);backdrop-filter:saturate(180%) blur(12px);
     -webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line);
-    display:flex;align-items:center;justify-content:space-between;padding:0 12px;}
+    display:flex;align-items:center;justify-content:space-between;padding:54px 12px 0;}
   .topbar button{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:var(--soft);font-size:20px;}
   .topbar button:active{background:var(--primary-soft);color:var(--primary);}
   .topbar-title{font-weight:800;font-size:16px;letter-spacing:.3px;}
@@ -83,6 +83,10 @@
   .view{padding:14px 14px 0;animation:fade .25s ease;}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .section-hint{color:var(--soft);font-size:12.5px;margin:2px 4px 12px;}
+  .warn{background:#fff6e6;border:1px solid #ffd591;border-radius:12px;padding:10px 12px;font-size:12px;color:#9a6a00;line-height:1.6;margin:0 4px 12px;}
+  .warn b{color:#7a4f00;}
+  .warn.ok{background:#e9fbf3;border:1px solid #8fe3c4;color:#0c7a52;}
+  .warn.ok b{color:#0a6244;}
   .module-title{font-size:18px;font-weight:800;margin:4px 4px 12px;display:flex;align-items:center;gap:8px;}
   .module-title .dot{width:8px;height:8px;border-radius:50%;background:var(--primary);}
 
@@ -115,15 +119,16 @@
   .quick:active{transform:scale(.98);}
 
   /* 英语练习 */
-  .en-word{font-size:18px;font-weight:800;}
-  .en-phon{color:var(--faint);font-size:12px;margin-left:8px;}
+  .en-word{font-size:18px;font-weight:800;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .en-phon{color:var(--faint);font-size:12px;margin-left:0;}
   .en-desc{margin-top:7px;color:var(--text);font-size:14px;}
-  .en-eg{margin-top:7px;color:var(--soft);font-size:13px;font-style:italic;border-left:3px solid var(--primary-soft);padding-left:9px;}
-  .en-actions{display:flex;gap:8px;margin-top:11px;}
-  .app-btn{flex:1;padding:9px;border-radius:11px;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;gap:5px;}
-  .app-btn.baici{background:#ff7a1a;color:#fff;}
-  .app-btn.liulishuo{background:#22c1c3;color:#fff;}
-  .app-btn:active{opacity:.85;}
+  .en-eg{margin-top:7px;color:var(--soft);font-size:13px;font-style:italic;border-left:3px solid var(--primary-soft);padding-left:9px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+  .en-eg .spk-inline{margin-left:0;width:26px;height:26px;font-size:12px;flex:0 0 auto;}
+  .en-trans{margin-top:4px;color:var(--text);font-size:13px;font-weight:600;padding-left:12px;}
+  .spk{margin-left:2px;width:30px;height:30px;border-radius:50%;background:var(--primary-soft);color:var(--primary);font-size:13px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;border:none;}
+  .spk:active{transform:scale(.9);}
+  .ext{display:inline-block;margin-top:12px;padding:9px 14px;border-radius:11px;background:var(--primary);color:#fff;font-size:13px;font-weight:700;text-decoration:none;cursor:pointer;}
+  .ext:active{opacity:.85;}
 
   /* 新闻 */
   .news-src{font-size:11px;font-weight:800;padding:2px 9px;border-radius:999px;}
@@ -136,10 +141,19 @@
   .seg{display:flex;background:var(--surface);border-radius:12px;padding:4px;box-shadow:var(--shadow);margin-bottom:12px;}
   .seg button{flex:1;padding:9px;border-radius:9px;font-weight:700;font-size:13px;color:var(--soft);}
   .seg button.on{background:var(--primary);color:#fff;}
+  .seg.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .seg.scroll button{flex:0 0 auto;white-space:nowrap;padding:9px 14px;}
+  .seg.scroll::-webkit-scrollbar{display:none;}
   .prod-name{font-size:15.5px;font-weight:800;}
   .plat{font-size:10px;font-weight:800;padding:2px 7px;border-radius:6px;margin-left:8px;vertical-align:middle;}
   .plat.a1688{background:#ffefe0;color:#e8730c;}
   .plat.intl{background:#e6f0ff;color:#1f6bff;}
+  .prod-img{position:relative;height:120px;border-radius:14px;margin-bottom:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;}
+  .prod-emoji{font-size:48px;line-height:1;filter:drop-shadow(0 5px 10px rgba(0,0,0,.2));}
+  .prod-cap{position:absolute;left:0;right:0;bottom:0;padding:9px 12px;color:#fff;font-size:13px;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.4);background:linear-gradient(transparent,rgba(0,0,0,.32));z-index:2;}
+  .prod-wrap{position:relative;height:120px;border-radius:14px;margin-bottom:12px;overflow:hidden;background:#eef1f8;}
+  .prod-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .prod-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;}
   .angle{margin-top:8px;background:var(--primary-soft);border-radius:11px;padding:10px 12px;font-size:13px;color:var(--primary-deep);}
   .angle b{color:var(--primary);}
   .heat{height:7px;border-radius:999px;background:var(--bg);margin-top:11px;overflow:hidden;}
@@ -159,6 +173,26 @@
   .update-flag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--primary);background:var(--primary-soft);padding:3px 10px;border-radius:999px;}
   .update-flag .pulse{width:7px;height:7px;border-radius:50%;background:var(--primary);animation:pulse 1.4s infinite;}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,79,255,.5)}70%{box-shadow:0 0 0 7px rgba(31,79,255,0)}100%{box-shadow:0 0 0 0 rgba(31,79,255,0)}}
+
+  /* 巴芒价值投资板块 */
+  .buff-quote{background:linear-gradient(135deg,#1f2a44,#2c3a63);color:#fff;border-radius:14px;padding:16px 18px;font-size:14px;line-height:1.7;font-weight:600;box-shadow:0 8px 24px rgba(20,24,58,.12);}
+  .buff-tomorrow{margin-top:12px;border-radius:16px;padding:16px;color:#fff;}
+  .buff-tomorrow.up{background:linear-gradient(135deg,#0fae6b,#16c97e);}
+  .buff-tomorrow.down{background:linear-gradient(135deg,#e8413f,#ff5a5f);}
+  .buff-tomorrow .bt-label{font-size:12px;opacity:.9;}
+  .buff-tomorrow .bt-dir{font-size:30px;font-weight:900;margin:4px 0;line-height:1.1;}
+  .buff-tomorrow .bt-conf{font-size:13px;font-weight:700;opacity:.95;}
+  .buff-tomorrow .bt-reason{font-size:12.5px;line-height:1.6;margin-top:6px;opacity:.92;}
+  .bh{font-weight:800;font-size:14.5px;margin-bottom:7px;color:var(--text);}
+  .bb{font-size:13.5px;color:var(--soft);line-height:1.7;}
+  .buff-act{flex:0 0 auto;font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px;}
+  .buff-act.buy{background:#e6f7ee;color:#0fae6b;}
+  .buff-act.hold{background:#eef1f8;color:#5b6b8c;}
+  .buff-act.wait{background:#fff2e6;color:#e8730c;}
+  .buff-points{display:flex;gap:10px;margin-top:9px;}
+  .buff-points .bp{flex:1;background:var(--bg);border-radius:11px;padding:9px 11px;}
+  .buff-points .bpl{display:block;font-size:11px;color:var(--faint);margin-bottom:3px;}
+  .buff-points .bp{font-size:13px;font-weight:700;color:var(--text);}
 
   /* 设置 */
   .field{margin-bottom:14px;}
@@ -223,20 +257,116 @@
   var GIST_URL = "";                 // 例：https://gist.githubusercontent.com/用户名/ID/raw/data.json
   var GIST_FALLBACK = GIST_URL;      // localStorage 可覆盖
 
+  /* ---- 真实数据覆盖层（1688 爬虫产出，优先于规则数据） ---- */
+  // 同源 data.real.json：本机爬虫提交到仓库后自动生效（GitHub Pages 同源可直读）。
+  // 若想用 Gist 直供真实数据，把 raw 链接填到下方或 App「设置→真实数据Gist」。
+  var GIST_REAL_FALLBACK = "";       // 例：https://gist.githubusercontent.com/用户名/ID/raw/data.real.json
+  var GIST_REAL_URL = GIST_REAL_FALLBACK; // localStorage "gistRealUrl" 可覆盖
+
   /* ---- 内置种子数据（在 Gist 未接通时让页面“有内容”） ---- */
+var SEED_PRODUCT_POOL = [
+  {key:"usb_hub", name:"USB HUB", tag1:"USB HUB", tag2:"电脑外设",
+   arch:[
+    ["多功能Type-C扩展坞","USB C Hub Multiport Adapter","做「笔记本一拖多」桌面布置，演示同时接显示器/硬盘/键鼠，强调多接口稳定不掉线。","Laptop one-to-many desk setup, show multi-port stable connection."],
+    ["7口带PD供电USB HUB","Powered 7-Port USB Hub","做「桌面供电一体」演示，强调边充边传数据、接口不抢电。","Desktop power-integrated demo, charge while transfer."],
+    ["Type-C扩展卡 多屏扩展","USB C Multi-Screen Adapter","打「多屏办公」痛点，演示双屏扩展，强调即插即显。","Multi-screen office pain, dual display demo, plug-and-show."],
+    ["迷你Type-C扩展坞 便携","Mini USB C Hub Portable","做「出差党」场景，演示一根线扩展，强调巴掌大能塞进口袋。","Frequent traveler scene, one cable expand, pocket-size."],
+    ["铝合金Type-C分线器","Aluminum USB C Splitter","打「质感桌面」痛点，演示金属外壳散热好，强调不掉速。","Premium metal build, better heat dissipation, no speed drop."],
+    ["千兆网口Type-C扩展坞","USB C Hub with Ethernet","做「笔记本没网口」痛点，演示接有线网稳如老狗。","Old laptop no ethernet port pain, stable wired net."],
+    ["十合一Type-C扩展坞","10-in-1 USB C Docking Station","打「全能坞」卖点，演示一个坞接全外设，强调桌面极简。","All-in-one dock, connect all peripherals, minimal desk."],
+    ["带HDMI的Type-C扩展坞","USB C Hub with HDMI","做「投屏办公」演示，强调4K清晰+便携即插即用。","Screen-mirror office demo, 4K clear + portable."],
+    ["USB3.0四口集线器","USB 3.0 4-Port Hub","打「老笔记本接口少」痛点，演示四口同时传不降速。","Old laptop few ports pain, 4 ports no speed drop."],
+    ["立式多口USB HUB","Vertical Multi-Port USB Hub","做「桌搭美学」场景，演示立式省空间不缠线。","Desk aesthetic scene, vertical saves space, no tangling."]
+   ]},
+  {key:"conv_switch", name:"转换器 & 切换器", tag1:"转换器", tag2:"办公",
+   arch:[
+    ["HDMI转VGA转换器","HDMI to VGA Converter","打「老显示器焕新」痛点，演示接笔记本投屏，强调免驱即插即用。","Old monitor revive pain, plug-and-play demo, driver-free."],
+    ["Type-C转HDMI转换器","Type C to HDMI Adapter","做「手机/电脑投屏」演示，强调4K清晰+便携。","Phone/laptop screen mirror demo, 4K clear + portable."],
+    ["DP转HDMI转换器 8K","DP to HDMI Converter 8K","打「高刷显示器」痛点，演示8K清晰传输，强调无压缩。","High-refresh monitor pain, 8K clear transmission, no compression."],
+    ["无线投屏器","Wireless HDMI Transmitter","做「老电视变智能」演示，强调免布线同屏。","Old TV to smart demo, cable-free mirroring."],
+    ["4K HDMI切换器 4进1出","4K HDMI Switch 4x1","做「多设备共用一屏」场景，演示游戏机/电脑/机顶盒一键切换。","Multi-device one-screen scenario, one-key switch."],
+    ["KVM切换器 双电脑","KVM Switch Dual PC","打「双主机党」场景，做键鼠共享实测，强调一键切换不卡。","Dual-host user scene, keyboard/mouse share test, one-key switch."],
+    ["USB切换器 2进1出","USB Switch 2x1","做「两套设备一套键鼠」省钱布置，强调即插即用。","Two devices one keyboard/mouse setup, plug-and-play."],
+    ["音频切换器 多音源","Audio Switch Multi-Source","做「多设备音频一键切」演示，强调无杂音。","Multi-device audio one-key switch demo, no noise."],
+    ["HDMI一分二分配器","HDMI Splitter 1x2","做「一信号两屏」布置，演示会议/监看同显，强调不闪屏。","One signal two screens, meeting/monitor mirroring, no flicker."],
+    ["二分频HDMI音频分离器","HDMI Audio Extractor","打「音响接电视」痛点，演示独立音频输出，强调无损。","Connect speakers to TV pain, independent audio out, lossless."]
+   ]},
+  {key:"capture", name:"视频采集卡", tag1:"视频采集卡", tag2:"直播",
+   arch:[
+    ["4K视频采集卡 直播推流","4K Video Capture Card","蹭直播热点，做「相机/游戏机画面进电脑」实测，强调低延迟不卡顿。","Live streaming trend, camera-to-PC capture test, low latency."],
+    ["便携视频采集卡 1080P","Portable Video Capture Card 1080P","打「手机变直播机」场景，演示户外直播推流，强调免驱。","Phone-to-streamer scene, outdoor live push, driver-free."],
+    ["HDMI转USB采集卡","HDMI to USB Capture Card","做「单反/摄像机进电脑」演示，强调即插即用免装驱动。","DSLR/camcorder to PC demo, plug-and-play, no driver."],
+    ["游戏主机采集卡","Game Capture Card","打「主机游戏直播」痛点，演示 PS5/NS 画面录制，强调 4K60。","Console game live pain, PS5/NS capture, 4K60."],
+    ["4K60专业采集卡","4K60 Pro Capture Card","做「专业主播」场景，演示多机位导播，强调零延迟。","Pro streamer scene, multi-cam switching, zero latency."],
+    ["竖屏直播采集卡","Vertical Live Capture Card","打「抖音/快手竖屏」痛点，演示手机竖屏直出，强调不变形。","Vertical short-video live pain, phone vertical out, no stretch."],
+    ["PCIe内置采集卡","PCIe Internal Capture Card","做「台式机直播主机」布置，演示内置无损采集，强调稳定。","Desktop streaming rig, internal lossless capture, stable."],
+    ["双路视频采集卡","Dual-Channel Capture Card","打「双机位」场景，演示两路信号同录，强调同步不偏。","Dual-cam scene, two signals record, in-sync."],
+    ["教学录播采集卡","Lecture Capture Card","做「网课/会议」演示，强调课件+人像同框，免驱动。","Online class/meeting demo, slide+face, driver-free."],
+    ["相机直播采集卡","Camera Live Capture Card","打「微单直播带货」痛点，演示高清画质进推流软件。","Mirrorless live commerce pain, HD into OBS."]
+   ]},
+  {key:"bt", name:"蓝牙适配器", tag1:"蓝牙适配器", tag2:"数码",
+   arch:[
+    ["蓝牙5.3适配器 USB接收器","Bluetooth 5.3 USB Adapter","打「老电脑变无线」痛点，演示连耳机/音箱，强调稳定不断连。","Old PC goes wireless pain, connect earbuds/speaker, stable."],
+    ["蓝牙5.0适配器 长距离","Bluetooth 5.0 Long Range Adapter","做「穿墙连接」实测，强调距离远不断连。","Long-distance connection test, stable through wall."],
+    ["蓝牙音频发射器 低延迟","Bluetooth Audio Transmitter","做「有线耳机变无线」场景，演示连车载/老音响，强调低延迟不卡声。","Wired earbuds to wireless, connect car/old speaker, low latency."],
+    ["蓝牙接收器 音响老设备","Bluetooth Receiver for Speaker","打「老音响变蓝牙」痛点，演示3.5mm接入，强调即插即响。","Old speaker to Bluetooth pain, 3.5mm in, plug-and-play."],
+    ["蓝牙5.0发射接收二合一","Bluetooth 5.0 TX RX 2-in-1","做「一物两用」演示，发射/接收切换，强调省钱。","One device two uses, TX/RX switch, save money."],
+    ["免驱蓝牙适配器","Driver-free Bluetooth Adapter","打「小白用户」痛点，演示插上就能用，强调免装驱动。","Beginner pain, plug and use, no driver."],
+    ["蓝牙网卡二合一","Bluetooth WiFi Combo Adapter","做「台式机无线化」布置，演示蓝牙+WiFi一双搞定。","Desktop wireless makeover, Bluetooth+WiFi one dongle."],
+    ["低延迟游戏蓝牙适配器","Low-Latency Gaming Bluetooth","打「游戏无线耳机」痛点，演示低延迟不拖影，强调音画同步。","Wireless gaming headset pain, low latency, A/V sync."],
+    ["车载蓝牙接收器","Car Bluetooth Receiver","做「老车变智能」场景，演示 aux 接入打电话/听歌。","Old car to smart, aux in, call/music."],
+    ["蓝牙音频接收器 3.5mm","Bluetooth 3.5mm Audio Receiver","打「有线音响无线化」痛点，演示小体积即插即用。","Wired audio wireless pain, tiny plug-and-play."]
+   ]},
+  {key:"cable", name:"电脑线材", tag1:"电脑线材", tag2:"网络",
+   arch:[
+    ["千兆网线 CAT6 成品线","Cat6 Ethernet Cable","做「网速拉满」布置，强调六类线稳定低延迟，适合游戏/直播。","Full-speed network setup, Cat6 stable low latency for gaming."],
+    ["Type-C数据线 100W快充","Type C Cable 100W Fast Charge","打「一根线充电脑+手机」痛点，演示100W快充，强调编织耐拉。","One cable charges laptop+phone, 100W demo, braided."],
+    ["编织Type-C线 240W","Braided Type C Cable 240W","打「大功率设备充电」场景，演示笔记本满速充，强调耐弯折。","High-power device charge, laptop full-speed, bend-proof."],
+    ["HDMI高清线 2.1 8K","HDMI 2.1 Cable 8K","做「高清不模糊」对比，强调2.1版支持8K120Hz。","HD clear compare, 2.1 supports 8K120Hz."],
+    ["Type-C转Lightning线","Type C to Lightning Cable","做「苹果用户」场景，演示快充+数据传输，强调MFi稳定。","Apple user scene, fast charge + data, stable."],
+    ["雷电4数据线","Thunderbolt 4 Cable","打「高速传输」痛点，演示40Gbps传大文件，强调不掉速。","High-speed transfer pain, 40Gbps big files, no drop."],
+    ["显示器连接线 DP线","DisplayPort Cable","做「高刷显示器」布置，演示2K/4K高刷，强调画面顺滑。","High-refresh monitor setup, 2K/4K high Hz, smooth."],
+    ["磁吸充电线","Magnetic Charging Cable","打「盲插充电」痛点，演示一碰即吸，强调不分正反。","Blind-plug charge pain, magnetic snap, no orientation."],
+    ["多合一数据线","Multi-in-1 Charging Cable","做「一根走天下」场景，演示多接头适配，强调出差必备。","One cable for all, multi-head adapter, travel must-have."],
+    ["编织快充数据线","Braided Fast Charge Cable","打「耐拉不破」痛点，演示暴力弯折不坏，强调两年质保。","Tug-proof pain, violent bend no break, 2-year warranty."]
+   ]},
+];
+
+function hashStr(s){ var h=2166136261; for(var i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,16777619);} return h>>>0; }
+function _rng(seed){ var a=seed>>>0; return function(){ a|=0; a=(a+0x6D2B79F5)|0; var t=Math.imul(a^(a>>>15),1|a); t=(t+Math.imul(t^(t>>>7),61|t))^t; return ((t^(t>>>14))>>>0)/4294967296; }; }
+function buildSeedProducts(key){
+  var plat = key==="p1688" ? "1688" : "阿里国际站";
+  return { tracks: SEED_PRODUCT_POOL.map(function(t){
+    var sales = t.arch.map(function(a){
+      var nm = key==="p1688" ? a[0] : a[1];
+      var ang = key==="p1688" ? a[2] : a[3];
+      var s = 20000 + Math.floor(_rng(hashStr("s"+nm))()*580000);
+      return {name:nm, plat:plat, sales:s, angle:ang, tags:[t.tag1,t.tag2], img:""};
+    }).sort(function(x,y){return y.sales-x.sales;}).slice(0,10);
+    var nw = t.arch.map(function(a){
+      var nm = key==="p1688" ? a[0] : a[1];
+      var ang = key==="p1688" ? a[2] : a[3];
+      var nm2 = key==="p1688" ? nm+"·2026新款" : nm+" 2026 New";
+      var d = Math.floor(_rng(hashStr("n"+nm))()*26);
+      return {name:nm2, plat:plat, listedDays:d, listedAt: d===0?"今天":d+"天前", angle:ang, tags:[t.tag1,t.tag2], img:""};
+    }).sort(function(x,y){return x.listedDays-y.listedDays;}).slice(0,10);
+    return {key:t.key, name:t.name, sales:sales, new:nw};
+  })};
+}
+
   var SEED = {
     updatedAt: Date.now(),
     english: [
-      {word:"Serendipity",phon:"/ˌserənˈdɪpəti/",tags:["高级词汇","写作"],desc:"意外发现珍奇事物的本领；机缘巧合。",eg:"Finding this café was pure serendipity.",topic:"咖啡"},
-      {word:"Leverage",phon:"/ˈliːvərɪdʒ/",tags:["商业","高频"],desc:"杠杆；充分利用（资源、关系）。",eg:"We can leverage our network to grow faster.",topic:"增长"},
-      {word:"Resilience",phon:"/rɪˈzɪliəns/",tags:["心理","演讲"],desc:"韧性；从挫折中恢复的能力。",eg:"Resilience is a skill you can train.",topic:"自律"},
-      {word:"Cutting-edge",phon:"/ˈkʌtɪŋ edʒ/",tags:["科技","带货"],desc:"尖端的；最前沿的。",eg:"Our cutting-edge design stands out.",topic:"产品"},
-      {word:"Pain point",phon:"/peɪn pɔɪnt/",tags:["营销","用户"],desc:"痛点；用户真实的困扰。",eg:"Solve the user's pain point first.",topic:"需求"},
-      {word:"Conversion",phon:"/kənˈvɜːʃn/",tags:["电商","数据"],desc:"转化；访客变成客户的比例。",eg:"A clear CTA boosts conversion.",topic:"转化"},
-      {word:"Niche",phon:"/niːʃ/",tags:["定位","选品"],desc:"细分市场；小众赛道。",eg:"Pick a niche you truly know.",topic:"选品"},
-      {word:"Hook",phon:"/hʊk/",tags:["短视频","开篇"],desc:"钩子；开头留住人的一句话。",eg:"The first 3 seconds are your hook.",topic:"脚本"},
-      {word:"Engagement",phon:"/ɪnˈɡeɪdʒmənt/",tags:["运营","互动"],desc:"互动量；评论/点赞/转发。",eg:"Engagement beats follower count.",topic:"运营"},
-      {word:"Organic",phon:"/ɔːˈɡænɪk/",tags:["流量","免费"],desc:"自然流量；非付费来的。",eg:"Organic reach is the real test.",topic:"流量"}
+      {word:"Serendipity",phon:"/ˌserənˈdɪpəti/",tags:["高级词汇","写作"],desc:"意外发现珍奇事物的本领；机缘巧合。",eg:"Finding this café was pure serendipity.",trans:"发现这家咖啡馆纯属机缘巧合。",topic:"咖啡"},
+      {word:"Leverage",phon:"/ˈliːvərɪdʒ/",tags:["商业","高频"],desc:"杠杆；充分利用（资源、关系）。",eg:"We can leverage our network to grow faster.",trans:"我们可以借助人脉网络更快成长。",topic:"增长"},
+      {word:"Resilience",phon:"/rɪˈzɪliəns/",tags:["心理","演讲"],desc:"韧性；从挫折中恢复的能力。",eg:"Resilience is a skill you can train.",trans:"韧性是一项可以训练的能力。",topic:"自律"},
+      {word:"Cutting-edge",phon:"/ˈkʌtɪŋ edʒ/",tags:["科技","带货"],desc:"尖端的；最前沿的。",eg:"Our cutting-edge design stands out.",trans:"我们前沿的设计脱颖而出。",topic:"产品"},
+      {word:"Pain point",phon:"/peɪn pɔɪnt/",tags:["营销","用户"],desc:"痛点；用户真实的困扰。",eg:"Solve the user's pain point first.",trans:"先解决用户真正的痛点。",topic:"需求"},
+      {word:"Conversion",phon:"/kənˈvɜːʃn/",tags:["电商","数据"],desc:"转化；访客变成客户的比例。",eg:"A clear CTA boosts conversion.",trans:"清晰的行动号召能提升转化。",topic:"转化"},
+      {word:"Niche",phon:"/niːʃ/",tags:["定位","选品"],desc:"细分市场；小众赛道。",eg:"Pick a niche you truly know.",trans:"选一个你真正熟悉的细分领域。",topic:"选品"},
+      {word:"Hook",phon:"/hʊk/",tags:["短视频","开篇"],desc:"钩子；开头留住人的一句话。",eg:"The first 3 seconds are your hook.",trans:"前 3 秒就是你的钩子。",topic:"脚本"},
+      {word:"Engagement",phon:"/ɪnˈɡeɪdʒmənt/",tags:["运营","互动"],desc:"互动量；评论/点赞/转发。",eg:"Engagement beats follower count.",trans:"互动量比粉丝数更重要。",topic:"运营"},
+      {word:"Organic",phon:"/ɔːˈɡænɪk/",tags:["流量","免费"],desc:"自然流量；非付费来的。",eg:"Organic reach is the real test.",trans:"自然触达才是真正的考验。",topic:"流量"}
     ],
     news: [
       {src:"新华财经",title:"央行公开市场净投放，资金面边际转松",sum:"今日央行开展逆回购操作，市场流动性预期改善，债市情绪回暖。",url:"https://www.news.cn/",time:"08:30"},
@@ -244,69 +374,19 @@
       {src:"财联社",title:"北向资金今日净流入超 60 亿，偏好核心资产",sum:"外资风险偏好回升，白酒、新能源龙头获逢低配置。",url:"https://www.cls.cn/",time:"10:00"},
       {src:"21财经",title:"多家车企披露月度交付，新能源渗透率再创新高",sum:"价格战趋缓背景下，头部车企交付稳健，智能化成新卖点。",url:"https://www.21jingji.com/",time:"11:20"}
     ],
-    p1688: {
-      hot: [
-        {name:"多巴胺穿搭 ins 风发夹",plat:"1688",heat:96,angle:"蹭「多巴胺穿搭」热点，小红书做‘9.9 元搞定夏日氛围感’开箱，强调款式多+批发价。",tags:["饰品","女装"]},
-        {name:"桌面无线充电小夜灯",plat:"1688",heat:93,angle:"打「租房好物」「宿舍神器」，短视频演示一物两用，挂‘学生党’‘独居’。",tags:["家居","数码"]},
-        {name:"宠物冻干零食礼盒",plat:"1688",heat:91,angle:"结合「它经济」，做‘毛孩子生日’场景，强调无谷低敏，引导私域复购。",tags:["宠物","食品"]},
-        {name:"复古胶片感拍立得相纸",plat:"1688",heat:90,angle:"蹭 Y2K 复古风，做‘低成本氛围感拍照’教程，关联相机周边。",tags:["影像","文具"]},
-        {name:" mini 手持小风扇",plat:"1688",heat:88,angle:"夏季刚需，做‘通勤降温’痛点，强调静音+续航，挂户外/通勤。",tags:["数码","夏季"]},
-        {name:"ins 风硅胶餐垫",plat:"1688",heat:86,angle:"打「精致早餐」人设，做‘10 秒摆盘’内容，关联厨房好物。",tags:["家居","厨房"]},
-        {name:"解压捏捏乐慢回弹",plat:"1688",heat:85,angle:"蹭「情绪价值」话题，做办公桌解压测评，强调手感+颜值。",tags:["解压","玩具"]},
-        {name:"车载手机支架阻尼臂",plat:"1688",heat:83,angle:"打「自驾好物」，短视频演示单手取放，强调稳固不挡视线。",tags:["车品","数码"]},
-        {name:"国风缠花发簪",plat:"1688",heat:82,angle:"蹭「新中式」热点，做汉服/日常搭配，强调手工质感。",tags:["饰品","国风"]},
-        {name:"折叠硅胶水壶",plat:"1688",heat:80,angle:"打「健身/户外」场景，强调可折叠省空间，挂运动人群。",tags:["运动","户外"]}
-      ],
-      latest: [
-        {name:"AI 语音闹钟投影",plat:"1688",heat:78,angle:"蹭 AI 家居热点，做‘懒人晨起’演示，强调语音+投影双功能。",tags:["数码","AI"]},
-        {name:"可水洗小白鞋喷雾",plat:"1688",heat:76,angle:"打「夏天小白鞋」痛点，做前后对比测评，强调免洗速干。",tags:["鞋包","清洁"]},
-        {name:"磁吸充电宝支架",plat:"1688",heat:75,angle:"打「出行刚需」，演示边充边看，强调轻薄磁吸。",tags:["数码","出行"]},
-        {name:"ins 风香薰石膏",plat:"1688",heat:74,angle:"蹭「家居香氛」话题，做 DIY 倒模内容，强调可定制气味。",tags:["家居","香薰"]},
-        {name:"儿童感统训练平衡板",plat:"1688",heat:72,angle:"打「育儿」场景，做感统科普，强调在家就能练。",tags:["母婴","玩具"]},
-        {name:"便携挂烫机 mini",plat:"1688",heat:71,angle:"打「出差/租房」痛点，做褶皱前后对比，强调 30 秒出汽。",tags:["家电","出行"]},
-        {name:"发光化妆镜带倍率",plat:"1688",heat:70,angle:"打「早八妆容」人设，做环光实测，强调三档色温。",tags:["美妆","镜"]},
-        {name:"宠物自动饮水机静音",plat:"1688",heat:69,angle:"蹭「它经济」，做‘猫咪爱喝水的秘密’，强调过滤静音。",tags:["宠物","家电"]},
-        {name:"桌面理线收纳盒",plat:"1688",heat:68,angle:"打「极简桌面」审美，做 before/after，强调隐藏走线。",tags:["家居","收纳"]},
-        {name:"夜跑 LED 反光臂带",plat:"1688",heat:66,angle:"打「夜跑安全」痛点，做夜景实测，强调高亮可见。",tags:["运动","户外"]}
-      ]
-    },
-    pintl: {
-      hot: [
-        {name:"LED 霓虹 signs 定制",plat:"阿里国际站",heat:92,angle:"打「欧美家居装饰」赛道，做‘garage makeover’短片，强调可定制文字。",tags:["家居","欧美"]},
-        {name:"Y2K 复古太阳镜",plat:"阿里国际站",heat:90,angle:"蹭 festival 季，做‘festival lookbook’，强调多色+批发价。",tags:["饰品","时尚"]},
-        {name:" portable 蓝牙音箱防水",plat:"阿里国际站",heat:88,angle:"打「outdoor」场景，做 beach/pool 实测，强调 IPX7。",tags:["数码","户外"]},
-        {name:" pet 自动喂食器",plat:"阿里国际站",heat:86,angle:"打「smart home for pets」，做‘never miss a meal’叙事，强调 App 控。",tags:["宠物","智能"]},
-        {name:" 瑜伽裤裸感高腰",plat:"阿里国际站",heat:85,angle:"蹭 athleisure，做‘squat proof’实测，强调提臀显瘦。",tags:["运动","女装"]},
-        {name:" 无线车载吸尘器",plat:"阿里国际站",heat:83,angle:"打「car detailing」话题，做 interior 清洁 asm，强调大吸力。",tags:["车品","清洁"]},
-        {name:" 硅胶折叠饭盒",plat:"阿里国际站",heat:82,angle:"打「meal prep」人群，做一周备餐，强调 microwave safe。",tags:["厨房","户外"]},
-        {name:" LED 星空投影灯",plat:"阿里国际站",heat:80,angle:"打「aesthetic room」审美，做 bedroom transformation，强调 app 控。",tags:["家居","礼物"]},
-        {name:" 不锈钢保温杯真空",plat:"阿里国际站",heat:78,angle:"打「everyday carry」，做 24h 保冷实测，强调 leak proof。",tags:["运动","杯具"]},
-        {name:" 解压捏捏 toy 批发",plat:"阿里国际站",heat:76,angle:"蹭「fidget」趋势，做 ASMR 开箱，强调慢回弹。",tags:["玩具","解压"]}
-      ],
-      latest: [
-        {name:" AI 翻译机便携",plat:"阿里国际站",heat:75,angle:"打「travel」痛点，做多语种实测，强调离线翻译。",tags:["数码","AI"]},
-        {name:" 可水洗帆布托特包",plat:"阿里国际站",heat:73,angle:"打「eco tote」趋势，做‘carry everything’穿搭，强调加厚。",tags:["箱包","环保"]},
-        {name:" mini 投影仪 1080P",plat:"阿里国际站",heat:72,angle:"打「home theater」，做卧室影院布置，强调便携自动对焦。",tags:["数码","影音"]},
-        {name:" 宠物 GPS 项圈",plat:"阿里国际站",heat:70,angle:"打「pet safety」，做走失找回叙事，强调实时定位。",tags:["宠物","智能"]},
-        {name:" 折叠太阳帽 UPF50",plat:"阿里国际站",heat:69,angle:"打「sun protection」，做海边实测，强调可折叠。",tags:["户外","帽"]},
-        {name:" 无线鼠标静音",plat:"阿里国际站",heat:68,angle:"打「work from home」，做 desk setup，强调静音+人体工学。",tags:["数码","办公"]},
-        {name:" 香薰蜡烛礼盒",plat:"阿里国际站",heat:66,angle:"打「self care」礼物，做 unboxing，强调天然大豆蜡。",tags:["香薰","礼物"]},
-        {name:" 健身阻力带套装",plat:"阿里国际站",heat:65,angle:"打「home workout」，做全身训练，强调多阻力级。",tags:["运动","健身"]},
-        {name:" 手机广角镜头夹",plat:"阿里国际站",heat:64,angle:"打「mobile photography」，做 vlog 实测，强调免 App。",tags:["影像","数码"]},
-        {name:" 儿童早教积木",plat:"阿里国际站",heat:62,angle:"打「STEM toy」，做亲子拼搭，强调大颗粒安全。",tags:["母婴","玩具"]}
-      ]
-    },
+    p1688: buildSeedProducts("p1688"),
+    pintl: buildSeedProducts("pintl"),
     funds: [
-      {name:"沪深300ETF",code:"510300",inflow:12.8,change:1.24},
-      {name:"中证红利ETF",code:"515080",inflow:9.6,change:0.86},
-      {name:"科创50ETF",code:"588000",inflow:8.1,change:2.05},
-      {name:"纳指ETF",code:"513100",inflow:6.7,change:-0.42},
-      {name:"黄金ETF",code:"518880",inflow:5.9,change:0.55},
-      {name:"消费ETF",code:"159928",inflow:4.3,change:1.10},
-      {name:"新能源车ETF",code:"515030",inflow:3.8,change:1.73},
-      {name:"军工ETF",code:"512660",inflow:3.1,change:0.92},
-      {name:"医药ETF",code:"512010",inflow:2.6,change:-0.18},
-      {name:"半导体ETF",code:"512760",inflow:2.2,change:2.41}
+      {name:"易方达蓝筹精选混合",code:"005827",inflow:15.2,change:1.85},
+      {name:"中欧医疗健康混合A",code:"003095",inflow:12.4,change:-0.92},
+      {name:"招商中证白酒指数(LOF)",code:"161725",inflow:11.0,change:2.30},
+      {name:"华夏成长混合",code:"000001",inflow:9.8,change:1.12},
+      {name:"富国天惠成长混合(LOF)",code:"161005",inflow:8.6,change:1.47},
+      {name:"兴全合宜混合(LOF)",code:"163417",inflow:7.3,change:0.78},
+      {name:"景顺长城新兴成长混合",code:"260108",inflow:6.9,change:2.05},
+      {name:"睿远成长价值混合A",code:"007119",inflow:6.1,change:1.33},
+      {name:"易方达消费行业股票",code:"110022",inflow:5.4,change:1.66},
+      {name:"诺安成长混合",code:"320007",inflow:4.7,change:-1.21}
     ],
     stocks: [
       {name:"中芯国际",code:"688981",price:58.3,inflow:9.2,change:3.12},
@@ -319,36 +399,105 @@
       {name:"立讯精密",code:"002475",price:36.8,inflow:2.8,change:1.96},
       {name:"中国中免",code:"601888",price:92.3,inflow:2.3,change:0.65},
       {name:"科大讯飞",code:"002230",price:48.5,inflow:2.0,change:2.10}
-    ]
+    ],
+    etfs: [
+      {name:"沪深300ETF",code:"510300",inflow:12.8,change:1.24},
+      {name:"科创50ETF",code:"588000",inflow:9.6,change:2.05},
+      {name:"中证500ETF",code:"510500",inflow:8.1,change:0.92},
+      {name:"创业板ETF",code:"159915",inflow:7.4,change:1.55},
+      {name:"券商ETF",code:"512000",inflow:6.7,change:1.18},
+      {name:"半导体ETF",code:"512760",inflow:6.0,change:2.41},
+      {name:"新能源车ETF",code:"515030",inflow:5.2,change:1.73},
+      {name:"黄金ETF",code:"518880",inflow:4.6,change:0.55},
+      {name:"纳指ETF",code:"513100",inflow:4.0,change:-0.42},
+      {name:"军工ETF",code:"512660",inflow:3.3,change:0.92}
+    ],
+    sectors: [
+      {name:"半导体",code:"",inflow:18.6,change:2.85},
+      {name:"新能源",code:"",inflow:15.2,change:1.92},
+      {name:"白酒",code:"",inflow:12.4,change:2.10},
+      {name:"医药",code:"",inflow:10.8,change:-0.65},
+      {name:"军工",code:"",inflow:9.1,change:1.33},
+      {name:"证券",code:"",inflow:8.0,change:1.02},
+      {name:"光伏",code:"",inflow:7.2,change:1.58},
+      {name:"消费电子",code:"",inflow:6.4,change:2.20},
+      {name:"人工智能",code:"",inflow:5.7,change:2.95},
+      {name:"储能",code:"",inflow:4.9,change:1.45}
+    ],
+    buffett: {
+      philosophy:"价格是你付出的，价值是你得到的。――沃伦·巴菲特",
+      marketTrend:"沪指围绕 3000 点震荡，成交量温和放大；价值股相对占优，市场情绪由恐慌转向中性。",
+      hft:"量化/高频资金今日净卖出约 12 亿，集中在题材炒作端；权重蓝筹获长线资金承接，高频扰动未改长期趋势。",
+      tomorrow:{dir:"上涨",conf:62,reason:"权重蓝筹估值合理 + 北向小幅回流，但量能不足，涨幅或有限。"},
+      strategy:"坚持能力圈与安全边际：只在看得懂、价格低于内在价值的生意上下注；用长期持有对冲短期噪音。",
+      picks:[
+        {name:"贵州茅台",code:"600519",action:"持有",trend:"回踩年线获支撑，量价企稳",buy:"1500-1550 分批",sell:"1750 上方分批止盈",logic:"强品牌 + 高自由现金流，符合护城河标准"},
+        {name:"招商银行",code:"600036",action:"买入",trend:"低位横盘，股息率具吸引力",buy:"35 以下",sell:"42 上方",logic:"零售银行龙头，资产质量稳健"},
+        {name:"长江电力",code:"600900",action:"持有",trend:"慢牛上行，防御属性强",buy:"25 附近",sell:"30 上方",logic:"稳定现金流 + 高分红，类债券资产"},
+        {name:"宁德时代",code:"300750",action:"观望",trend:"震荡筑底，估值回归",buy:"180-200 观察",sell:"230 上方",logic:"动力电池龙头，需等景气拐点确认"}
+      ]
+    }
   };
 
   /* ---- 运行状态 ---- */
   var DATA = JSON.parse(JSON.stringify(SEED));
   var current = "overview";
-  var productTab = "hot";          // 1688 / 国际站 内部切换
+  var trackTab = 0;                 // 1688 / 国际站 细分赛道切换
 
   /* ---- 工具 ---- */
   function $(s){return document.querySelector(s);}
   function el(html){var d=document.createElement("div");d.innerHTML=html.trim();return d.firstChild;}
   function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
   function pad(n){return n<10?"0"+n:""+n;}
+  // ---- 英语发音（兼容 iOS Safari 的已知坑）----
+  var _voices=[];
+  function loadVoices(){ try{ _voices=window.speechSynthesis.getVoices()||[]; }catch(e){ _voices=[]; } }
+  function pickVoice(){
+    if(!_voices||!_voices.length) return null;
+    return _voices.find(function(x){return x.lang&&x.lang.toLowerCase()==="en-us";})
+        || _voices.find(function(x){return x.lang&&x.lang.toLowerCase().indexOf("en")===0;})
+        || _voices.find(function(x){return x.name&&/en/i.test(x.name);})
+        || null;
+  }
+  if("speechSynthesis" in window){
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged=loadVoices;
+  }
+  function speak(word){
+    if(!("speechSynthesis" in window)){ toast("当前浏览器不支持发音"); return; }
+    try{
+      var ss=window.speechSynthesis;
+      loadVoices(); // 确保拿到最新语音包
+      var u=new SpeechSynthesisUtterance(word);
+      u.lang="en-US"; u.rate=0.9; u.pitch=1.0; u.volume=1.0;
+      var v=pickVoice(); if(v) u.voice=v;
+      var started=false;
+      u.onstart=function(){ started=true; };
+      u.onerror=function(){ if(!started) toast("发音失败：请检查手机是否静音，或系统「文字转语音(TTS)」未安装英文语音包"); };
+      if(ss.speaking||ss.pending){
+        // 正在播放：先取消，稍后再播（避免 Android 同步 cancel 吞掉发音）
+        try{ ss.cancel(); }catch(e){}
+        setTimeout(function(){ try{ ss.speak(u); }catch(e){} }, 80);
+      }else{
+        // 首次/空闲：必须在用户点击调用栈内“同步” speak，才能解锁 Android 音频
+        try{ ss.speak(u); }catch(e){ toast("发音失败，请检查手机是否静音"); }
+        // iOS 偶发首次静音：若 onstart 未触发且 300ms 仍空闲，则补一次（不会重复短词）
+        setTimeout(function(){ if(!started && !ss.speaking && !ss.pending){ try{ ss.speak(u); }catch(e){} } }, 300);
+      }
+    }catch(e){ toast("发音失败，请检查手机是否静音或未装英文语音包"); }
+  }
+  function openExt(url){ if(url) window.open(url,"_blank","noopener"); }
+  function prodUrl(key,name){
+    if(key==="p1688"){
+      // 1688 搜索页强制登录才能看，改用百度公开检索 1688 在售商品，免登录即可查看
+      return "https://www.baidu.com/s?wd="+encodeURIComponent(name+" 1688 销量");
+    }
+    return "https://www.alibaba.com/trade/search?SearchText="+encodeURIComponent(name);
+  }
   function fmtTime(ts){var d=new Date(ts);return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())+" "+pad(d.getHours())+":"+pad(d.getMinutes());}
   function todayStr(){var d=new Date();return d.getFullYear()+"年"+(d.getMonth()+1)+"月"+d.getDate()+"日 周"+["日","一","二","三","四","五","六"][d.getDay()];}
   var toastTimer;
   function toast(msg){var t=$("#toast");t.textContent=msg;t.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.hidden=true;},1800);}
-
-  /* ---- 唤起 App（百词斩 / 流利说） ---- */
-  function openApp(scheme, web){
-    try{var a=document.createElement("a");a.href=scheme;a.style.display="none";document.body.appendChild(a);a.click();a.remove();}catch(e){}
-    setTimeout(function(){ window.location.href = web; }, 600);
-  }
-  function openBaici(word){
-    // 百词斩：尝试唤起 App，失败跳官网
-    openApp("baicizhan://", "https://www.baicizhan.com");
-  }
-  function openLiulishuo(word){
-    openApp("liulishuo://", "https://www.liulishuo.com");
-  }
 
   /* ---- 导航定义 ---- */
   var NAV = [
@@ -358,9 +507,12 @@
     {id:"p1688",     ico:"🔥", name:"1688爆款二创", badge:"20"},
     {id:"pintl",     ico:"🌏", name:"国际站新款二创", badge:"20"},
     {id:"funds",     ico:"💰", name:"基金",       badge:"14:00"},
-    {id:"stocks",    ico:"📈", name:"股票",       badge:"14:00"}
+    {id:"etfs",      ico:"📊", name:"基金ETF",     badge:"14:00"},
+    {id:"stocks",    ico:"📈", name:"股票",       badge:"14:00"},
+    {id:"sectors",   ico:"🔥", name:"热门板块",     badge:"14:00"},
+    {id:"buffett",   ico:"📜", name:"巴芒策略",     badge:"14:00"}
   ];
-  var TITLES = {overview:"概览",english:"英语练习",news:"今日热点",p1688:"1688爆款二创",pintl:"国际站新款二创",funds:"基金 · 资金流入榜",stocks:"股票 · 资金流入榜"};
+  var TITLES = {overview:"概览",english:"英语练习",news:"今日热点",p1688:"1688爆款二创",pintl:"国际站新款二创",funds:"基金 · 资金流入榜",etfs:"基金ETF · 资金流入榜",stocks:"股票 · 资金流入榜",sectors:"股票热门板块 · 资金流入榜",buffett:"巴菲特 · 芒格价值投资"};
 
   function renderNav(){
     var n=$("#nav");n.innerHTML="";
@@ -384,7 +536,10 @@
     else if(current==="p1688") m.innerHTML=viewProducts("p1688");
     else if(current==="pintl") m.innerHTML=viewProducts("pintl");
     else if(current==="funds") m.innerHTML=viewRank("funds");
+    else if(current==="etfs") m.innerHTML=viewRank("etfs");
     else if(current==="stocks") m.innerHTML=viewRank("stocks");
+    else if(current==="sectors") m.innerHTML=viewRank("sectors");
+    else if(current==="buffett") m.innerHTML=viewBuffett();
     bindView();
   }
 
@@ -429,17 +584,17 @@
   function viewEnglish(){
     var items=DATA.english||[];
     var html='<div class="view"><div class="module-title"><span class="dot"></span>英语练习 · 每天 10 条</div>'+
-      '<div class="section-hint">点按钮直接唤起 App（百词斩 / 流利说），没装则跳官网。</div>';
+      '<div class="section-hint">点 🔊 听单词或短语的原生发音，下方为中文翻译。</div>';
     items.forEach(function(it){
       html+='<div class="card">'+
-        '<div class="en-word">'+esc(it.word)+'<span class="en-phon">'+esc(it.phon||"")+'</span></div>'+
+        '<div class="en-word">'+esc(it.word)+'<span class="en-phon">'+esc(it.phon||"")+'</span>'+
+        '<button class="spk" data-spk="'+esc(it.word)+'" aria-label="朗读单词发音">🔊</button></div>'+
         (it.tags&&it.tags.length?'<div style="margin-top:7px">'+it.tags.map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join("")+'</div>':'')+
         '<div class="en-desc">'+esc(it.desc||"")+'</div>'+
-        (it.eg?'<div class="en-eg">“'+esc(it.eg)+'”</div>':'')+
-        '<div class="en-actions">'+
-          '<button class="app-btn baici" data-baici="'+esc(it.word)+'">🔶 百词斩</button>'+
-          '<button class="app-btn liulishuo" data-liu="'+esc(it.word)+'">🔵 流利说</button>'+
-        '</div></div>';
+        (it.eg?'<div class="en-eg">“'+esc(it.eg)+'”'+
+          '<button class="spk spk-inline" data-spk="'+esc(it.eg)+'" aria-label="朗读短语发音">🔊</button></div>'+
+          (it.trans?'<div class="en-trans">'+esc(it.trans)+'</div>':''):'')+
+        '</div>';
     });
     return html+'</div>';
   }
@@ -462,55 +617,158 @@
     return html+'</div>';
   }
 
-  function viewProducts(key){
-    var label = key==="p1688" ? "1688" : "阿里国际站";
-    var data = DATA[key]||{hot:[],latest:[]};
-    var html='<div class="view"><div class="module-title"><span class="dot"></span>'+esc(label)+'爆款二创</div>'+
-      '<div class="section-hint">每天抓取'+label+'，AI 改写成「热门爆款 + 最新下单款式」各 10 条，附改编角度。</div>'+
-      '<div class="seg"><button class="'+(productTab==="hot"?"on":"")+'" data-ptab="hot">🔥 热门爆款 (10)</button>'+
-        '<button class="'+(productTab==="latest"?"on":"")+'" data-ptab="latest">🆕 最新下单 (10)</button></div>';
-    var list = data[productTab]||[];
-    list.forEach(function(it,i){
-      html+='<div class="card">'+
+  // 产品“图片”：按子类目生成渐变+图标视觉块（离线可靠，无需后端抓图）
+  var SUBCAT = [
+    {kw:["usb hub"],            emoji:"🔌", c1:"#1f4fff", c2:"#5b7bff"},
+    {kw:["转换器","converter"],  emoji:"🔄", c1:"#7c5cff", c2:"#a78bfa"},
+    {kw:["切换器","switch"],     emoji:"🎛️", c1:"#00b8a9", c2:"#33d6c8"},
+    {kw:["视频采集卡","采集卡","capture","video capture"], emoji:"🎥", c1:"#ff5a5f", c2:"#ff8a8d"},
+    {kw:["蓝牙适配器","bluetooth"], emoji:"📡", c1:"#4f5bd5", c2:"#7c86e8"},
+    {kw:["电脑线材","线材","cable"], emoji:"🧵", c1:"#ff8a1a", c2:"#ffb05a"}
+  ];
+  function prodVisual(it){
+    var text=((it.tags||[]).join(" ")+" "+(it.name||"")).toLowerCase();
+    var s=SUBCAT.find(function(x){return x.kw.some(function(k){return text.indexOf(k.toLowerCase())>=0;});})
+         || {emoji:"📦", c1:"#8a90b0", c2:"#aab0cc"};
+    // 有真实产品图：优先展示；加载失败自动回退到渐变占位
+    if(it.img){
+      var errbg="this.style.display='none';this.parentNode.style.background='linear-gradient(135deg,"+s.c1+","+s.c2+")'";
+      return '<div class="prod-wrap">'+
+        '<img class="prod-photo" loading="lazy" src="'+esc(it.img)+'" alt="'+esc(it.name)+'" onerror="'+errbg+'">'+
+        '<span class="prod-cap">'+esc(it.name)+'</span></div>';
+    }
+    return '<div class="prod-wrap"><div class="prod-fallback" style="background:linear-gradient(135deg,'+s.c1+','+s.c2+')">'+
+      '<span class="prod-emoji">'+s.emoji+'</span>'+
+      '<span class="prod-cap">'+esc(it.name)+'</span></div></div>';
+  }
+  function fmtSales(n){
+    n = n||0;
+    if(n>=10000) return (Math.round(n/1000)/10).toFixed(1).replace(/\.0$/,"")+"万";
+    return String(n);
+  }
+  function renderTrackList(list, kind, key){
+    if(!list||!list.length) return '<div class="empty"><div class="e">🔥</div>生成中…</div>';
+    return list.map(function(it,i){
+      var metric = kind==="sales"
+        ? ('<span class="faint">累计销量</span><span class="up" style="font-weight:800">'+fmtSales(it.sales)+'</span>')
+        : ('<span class="faint">上架</span><span class="up" style="font-weight:800">'+esc(it.listedAt||"")+'</span>');
+      return '<div class="card">'+
+        prodVisual(it)+
         '<div class="row between"><div class="prod-name">'+esc(it.name)+
-          '<span class="plat '+(key==="p1688"?"a1688":"intl")+'">'+esc(it.plat||label)+'</span></div>'+
+          '<span class="plat '+(key==="p1688"?"a1688":"intl")+'">'+esc(it.plat||"")+'</span></div>'+
           '<span class="faint">#'+(i+1)+'</span></div>'+
         (it.tags&&it.tags.length?'<div style="margin-top:8px">'+it.tags.map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join("")+'</div>':'')+
         '<div class="angle"><b>改编角度：</b>'+esc(it.angle||"")+'</div>'+
-        '<div class="row between" style="margin-top:10px"><span class="faint">热度</span><span class="up" style="font-weight:800">'+(it.heat||0)+'</span></div>'+
-        '<div class="heat"><i style="width:'+(it.heat||0)+'%"></i></div>'+
+        '<div class="row between" style="margin-top:10px">'+metric+'</div>'+
+        (function(){
+          // 真实数据自带商品链接 → 直接跳真实商品页；否则跳平台实时搜索
+          if(it.url){
+            return '<a class="ext" data-url="'+esc(it.url)+'">看 '+esc(it.plat||"")+' 真实商品页 ↗</a>';
+          }
+          var exturl = prodUrl(key, it.name);
+          var exttext = (key==="p1688") ? "在 1688 查实时销量（免登录）↗" : "在 alibaba 查实时销量 ↗";
+          return '<a class="ext" data-url="'+esc(exturl)+'">'+exttext+'</a>';
+        })()+
       '</div>';
-    });
-    if(!list.length) html+='<div class="empty"><div class="e">🔥</div>数据生成中…</div>';
+    }).join("");
+  }
+  function viewProducts(key){
+    var label = key==="p1688" ? "1688" : "阿里国际站";
+    var data = DATA[key]||{tracks:[]};
+    var tracks = data.tracks||[];
+    if(!tracks.length) return '<div class="view"><div class="module-title"><span class="dot"></span>'+esc(label)+'爆款二创</div><div class="empty"><div class="e">🔥</div>数据生成中…</div></div>';
+    if(trackTab >= tracks.length) trackTab = 0;
+    var cur = tracks[trackTab];
+    var isLive = (key==="p1688" && DATA.live1688) || (key==="pintl" && DATA.liveIntl);   // 该平台真实覆盖层已生效
+    var platName = (key==="p1688") ? "1688.com" : "alibaba.com";
+    var banner = isLive
+      ? '<div class="warn ok">✅ <b>实时数据</b>（来自 '+platName+' 真实榜单覆盖层）· 销量按前台累计销量、新品按上架时间倒序。商品图为平台真实主图，链接为真实商品页。</div>'
+      : '<div class="warn">⚠️ 以下为「电脑线材」的<b>爆款二创参考样例</b>（渐变占位、<b>未使用任何随机图</b>），由规则生成，<b>并非 '+platName+' 前台真实销量/上架榜</b>。'+platName+' 封锁机器人，需你本机用登录态运行 scrape_real.py，才能显示真实主图与真实商品链接（见说明）。</div>';
+    var sfx = isLive ? "（实时）" : "（参考）";
+    var html='<div class="view"><div class="module-title"><span class="dot"></span>'+esc(label)+'爆款二创</div>'+
+      banner +
+      '<div class="seg scroll">'+ tracks.map(function(t,i){ return '<button class="'+(i===trackTab?"on":"")+'" data-track="'+i+'">'+esc(t.name)+'</button>'; }).join("") +'</div>'+
+      '<div class="section-hint" style="margin-top:2px"><b>📊 销量 TOP10'+sfx+'</b> · 按累计销量</div>'+
+      renderTrackList(cur.sales, "sales", key) +
+      '<div class="section-hint" style="margin-top:14px"><b>🆕 新品 TOP10'+sfx+'</b> · 按上架时间倒序</div>'+
+      renderTrackList(cur.new, "new", key);
     return html+'</div>';
   }
 
   function viewRank(kind){
-    var isFund = kind==="funds";
+    var TITLE={funds:"基金 · 资金流入榜",etfs:"基金ETF · 资金流入榜",stocks:"股票 · 资金流入榜",sectors:"股票热门板块 · 资金流入榜"};
+    var REF={funds:"养基宝",etfs:"养基宝",stocks:"同花顺",sectors:"东方财富"};
+    var isFund=(kind==="funds"||kind==="etfs");
+    var isSector=(kind==="sectors");
     var items=DATA[kind]||[];
     items = items.slice().sort(function(a,b){return (b.inflow||0)-(a.inflow||0);});
-    var html='<div class="view"><div class="module-title"><span class="dot"></span>'+(isFund?"基金 · 资金流入榜":"股票 · 资金流入榜")+'</div>'+
-      '<div class="row between" style="margin:0 4px 12px"><div class="section-hint" style="margin:0">参考'+(isFund?"养基宝":"同花顺")+'，按净流入排序</div>'+
+    var html='<div class="view"><div class="module-title"><span class="dot"></span>'+(TITLE[kind]||"资金流入榜")+'</div>'+
+      '<div class="row between" style="margin:0 4px 12px"><div class="section-hint" style="margin:0">参考'+REF[kind]+'，按净流入排序</div>'+
         '<span class="update-flag"><span class="pulse"></span>每日 14:00 更新</span></div>';
     items.forEach(function(it,i){
       var ch=(it.change||0);
+      var ext = isFund
+        ? ("https://fund.eastmoney.com/"+encodeURIComponent(it.code||"")+".html")
+        : ("https://so.eastmoney.com/web/s?keyword="+encodeURIComponent(it.code||it.name));
       html+='<div class="card"><div class="rank">'+
         '<div class="rank-no'+(i<3?" top":"")+'">'+(i+1)+'</div>'+
-        '<div class="rank-name"><div class="nm">'+esc(it.name)+'</div><div class="cd">'+esc(it.code||"")+(isFund?"":" · "+((it.price!=null)?it.price:"—")+'元')+'</div></div>'+
-        '<div class="rank-val"><div class="in">+'+(it.inflow||0)+(isFund?"亿":"亿")+'</div>'+
+        '<div class="rank-name"><div class="nm">'+esc(it.name)+'</div><div class="cd">'+esc(it.code||"")+((it.price!=null)?" · "+it.price+"元":"")+'</div></div>'+
+        '<div class="rank-val"><div class="in">+'+(it.inflow||0)+'亿</div>'+
           '<div class="ch '+(ch>=0?"up":"down")+'">'+(ch>=0?"▲":"▼")+' '+Math.abs(ch)+'%</div></div>'+
-      '</div></div>';
+      '</div>'+
+      '<a class="ext" data-url="'+esc(ext)+'">查看'+(isFund?"基金详情":(isSector?"板块行情":"个股行情"))+' ↗</a>'+
+      '</div>';
     });
     if(!items.length) html+='<div class="empty"><div class="e">📊</div>榜单生成中…</div>';
+    return html+'</div>';
+  }
+
+  function viewBuffett(){
+    var d=DATA.buffett||{};
+    var t=d.tomorrow||{};
+    var up=(t.dir||"")==="上涨";
+    var pickLink=function(it){ return "https://so.eastmoney.com/web/s?keyword="+encodeURIComponent(it.code||it.name); };
+    var html='<div class="view"><div class="module-title"><span class="dot"></span>巴菲特 · 芒格价值投资</div>'+
+      '<div class="section-hint">参考巴菲特/芒格投资理念，每日 14:00 更新：股票走势、买卖点位、选股策略、行情趋势与高频交易观测。仅供学习，非投资建议。</div>'+
+      // 理念金句
+      '<div class="buff-quote">“'+(d.philosophy||"")+'”</div>'+
+      // 明日预测（醒目）
+      '<div class="buff-tomorrow '+(up?"up":"down")+'">'+
+        '<div class="bt-label">明日方向预测</div>'+
+        '<div class="bt-dir">'+(up?"▲ 上涨":"▼ 下跌")+'</div>'+
+        '<div class="bt-conf">置信度 '+(t.conf||0)+'%</div>'+
+        '<div class="bt-reason">'+(t.reason||"")+'</div>'+
+      '</div>'+
+      // 行情趋势
+      '<div class="card"><div class="bh">📈 行情趋势</div><div class="bb">'+esc(d.marketTrend||"")+'</div></div>'+
+      // 高频交易观测
+      '<div class="card"><div class="bh">🤖 高频交易观测</div><div class="bb">'+esc(d.hft||"")+'</div></div>'+
+      // 选股策略
+      '<div class="card"><div class="bh">🎯 选股策略</div><div class="bb">'+esc(d.strategy||"")+'</div></div>'+
+      // 个股：走势 / 买卖点位 / 逻辑
+      '<div class="section-hint" style="margin-top:6px">个股：走势 · 买卖点位 · 选股逻辑</div>';
+    (d.picks||[]).forEach(function(it){
+      var act=it.action||"持有";
+      html+='<div class="card">'+
+        '<div class="row between"><div class="prod-name">'+esc(it.name)+
+          '<span class="plat intl">'+esc(it.code||"")+'</span></div>'+
+          '<span class="buff-act '+(act==="买入"?"buy":(act==="观望"?"wait":"hold"))+'">'+esc(act)+'</span></div>'+
+        '<div class="bb" style="margin-top:8px"><b>走势：</b>'+esc(it.trend||"")+'</div>'+
+        '<div class="buff-points"><div class="bp"><span class="bpl">买点</span>'+esc(it.buy||"—")+'</div>'+
+          '<div class="bp"><span class="bpl">卖点</span>'+esc(it.sell||"—")+'</div></div>'+
+        '<div class="bb"><b>逻辑：</b>'+esc(it.logic||"")+'</div>'+
+        '<a class="ext" data-url="'+esc(pickLink(it))+'">查 '+esc(it.name)+' 行情 ↗</a>'+
+      '</div>';
+    });
     return html+'</div>';
   }
 
   /* ---- 视图内事件 ---- */
   function bindView(){
     $all("[data-go]").forEach(function(b){b.addEventListener("click",function(){go(b.dataset.go);});});
-    $all("[data-baici]").forEach(function(b){b.addEventListener("click",function(e){e.stopPropagation();openBaici(b.dataset.baici);toast("正在唤起百词斩…");});});
-    $all("[data-liu]").forEach(function(b){b.addEventListener("click",function(e){e.stopPropagation();openLiulishuo(b.dataset.liu);toast("正在唤起流利说…");});});
-    $all("[data-ptab]").forEach(function(b){b.addEventListener("click",function(){productTab=b.dataset.ptab;render();});});
+    $all("[data-track]").forEach(function(b){b.addEventListener("click",function(){trackTab=parseInt(b.dataset.track,10)||0;render();});});
+    $all("[data-spk]").forEach(function(b){b.addEventListener("click",function(e){e.stopPropagation();speak(b.dataset.spk);});});
+    $all("[data-url]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();openExt(b.dataset.url);});});
   }
   function $all(s){return Array.prototype.slice.call(document.querySelectorAll(s));}
 
@@ -520,6 +778,54 @@
     if(GIST_FALLBACK||GIST_URL) return GIST_FALLBACK||GIST_URL;
     return "./data.json";   // 无 Gist 时回退到同源 data.json
   }
+  function getRealOverlaySources(){
+    // 真实数据覆盖层的多个来源，按优先级：Gist 真实链接 > 同源 data.real.json
+    var arr=["./data.real.json"];   // 同源覆盖层（本机爬虫提交到仓库即生效）
+    try{var u=localStorage.getItem("gistRealUrl");if(u)arr.unshift(u.trim());}catch(e){}
+    if(GIST_REAL_URL) arr.unshift(GIST_REAL_URL);
+    return arr;
+  }
+  function mergeRealOverlay(real){
+    // 用真实覆盖层替换对应平台的规则数据（仅当该平台确有真实 tracks）
+    if(!real||!real.live) return false;
+    var changed=false;
+    if(real.p1688&&real.p1688.tracks&&real.p1688.tracks.length){
+      DATA.p1688=real.p1688; DATA.live1688=true; changed=true;
+    }
+    if(real.pintl&&real.pintl.tracks&&real.pintl.tracks.length){
+      DATA.pintl=real.pintl; DATA.liveIntl=true; changed=true;
+    }
+    DATA.live = !!(DATA.live1688||DATA.liveIntl);
+    DATA.realUpdatedAt = real.updatedAt || DATA.realUpdatedAt;
+    DATA.realSource = real.source || "real";
+    return changed;
+  }
+  function applyRealOverlay(){
+    // 依次尝试各覆盖层来源，取最新的真实数据
+    var sources=getRealOverlaySources();
+    var best=null;
+    function tryNext(i){
+      if(i>=sources.length){
+        if(best){
+          mergeRealOverlay(best);
+          try{localStorage.setItem("wbReal",JSON.stringify(best));}catch(e){}
+        }
+        DATA._realApplied = !!best;
+        render();
+        return;
+      }
+      fetch(sources[i]+"?t="+Date.now(),{cache:"no-store"})
+        .then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); })
+        .then(function(j){
+          if(j&&j.live&&j.p1688&&j.p1688.tracks&&j.p1688.tracks.length){
+            if(!best || (j.updatedAt||0) >= (best.updatedAt||0)) best=j;
+          }
+        })
+        .catch(function(e){ /* 无覆盖层属正常，静默 */ })
+        .finally(function(){ tryNext(i+1); });
+    }
+    tryNext(0);
+  }
   function loadData(force){
     var url=getGistUrl();
     if(!url){ if(force) toast("未配置数据源，显示内置样例"); return; }
@@ -528,12 +834,18 @@
       .then(function(json){
         if(json&&(json.english||json.news||json.p1688||json.pintl||json.funds||json.stocks)){
           DATA=json; DATA.updatedAt=DATA.updatedAt||Date.now();
+          // 先试用缓存里的真实标记（断网时仍显示真实状态）
+          try{var c=localStorage.getItem("wbReal");if(c){var rj=JSON.parse(c); if(rj.live) mergeRealOverlay(rj);}}catch(e){}
           try{localStorage.setItem("wbCache",JSON.stringify(DATA));}catch(e){}
           render(); if(force) toast("已刷新最新数据 ✅");
         } else { if(force) toast("数据源为空，显示样例"); }
       })
       .catch(function(err){ console.warn("数据读取失败",err); if(force) toast("读取失败，显示内置样例"); })
-      .finally(function(){ $("#refreshBtn").innerHTML="⟳"; });
+      .finally(function(){
+        $("#refreshBtn").innerHTML="⟳";
+        // 无论基础数据是否成功，都尝试套用真实覆盖层
+        applyRealOverlay();
+      });
   }
   function loadCache(){
     try{var c=localStorage.getItem("wbCache");if(c){DATA=JSON.parse(c);}}catch(e){}
