@@ -1,30 +1,18 @@
 {
-  "updatedAt": 1788005291870,
+  "updatedAt": 1788048509973,
   "live": false,
   "english": [
     {
-      "word": "Funnel",
-      "phon": "/ˈfʌnl/",
+      "word": "Resilience",
+      "phon": "/rɪˈzɪliəns/",
       "tags": [
-        "增长",
-        "转化"
+        "心理",
+        "演讲"
       ],
-      "desc": "漏斗；从曝光到成交的路径。",
-      "eg": "Optimize each step of the funnel.",
-      "trans": "优化漏斗的每一步。",
-      "topic": "增长"
-    },
-    {
-      "word": "Persona",
-      "phon": "/pəˈsəʊnə/",
-      "tags": [
-        "定位",
-        "人设"
-      ],
-      "desc": "人物画像；目标用户原型。",
-      "eg": "Build a clear persona first.",
-      "trans": "先建立一个清晰的人物画像。",
-      "topic": "定位"
+      "desc": "韧性；从挫折中恢复的能力。",
+      "eg": "Resilience is a skill you can train.",
+      "trans": "韧性是一项可以训练的能力。",
+      "topic": "心理"
     },
     {
       "word": "Leverage",
@@ -39,52 +27,16 @@
       "topic": "商业"
     },
     {
-      "word": "Conversion",
-      "phon": "/kənˈvɜːʃn/",
+      "word": "Margin",
+      "phon": "/ˈmɑːdʒɪn/",
       "tags": [
         "电商",
-        "数据"
+        "利润"
       ],
-      "desc": "转化；访客变成客户的比例。",
-      "eg": "A clear CTA boosts conversion.",
-      "trans": "清晰的行动号召能提升转化。",
+      "desc": "毛利；售价减成本。",
+      "eg": "Watch your margin, not just revenue.",
+      "trans": "盯紧毛利，而不只是营收。",
       "topic": "电商"
-    },
-    {
-      "word": "Engagement",
-      "phon": "/ɪnˈɡeɪdʒmənt/",
-      "tags": [
-        "运营",
-        "互动"
-      ],
-      "desc": "互动量；评论/点赞/转发。",
-      "eg": "Engagement beats follower count.",
-      "trans": "互动量比粉丝数更重要。",
-      "topic": "运营"
-    },
-    {
-      "word": "Viral",
-      "phon": "/ˈvaɪrəl/",
-      "tags": [
-        "传播",
-        "短视频"
-      ],
-      "desc": "病毒式传播；自发扩散。",
-      "eg": "Make it shareable to go viral.",
-      "trans": "让它值得分享，才能病毒式传播。",
-      "topic": "传播"
-    },
-    {
-      "word": "Pain point",
-      "phon": "/peɪn pɔɪnt/",
-      "tags": [
-        "营销",
-        "用户"
-      ],
-      "desc": "痛点；用户真实的困扰。",
-      "eg": "Solve the user's pain point first.",
-      "trans": "先解决用户真正的痛点。",
-      "topic": "营销"
     },
     {
       "word": "Scarcity",
@@ -99,28 +51,76 @@
       "topic": "营销"
     },
     {
-      "word": "Trend",
-      "phon": "/trend/",
+      "word": "Pain point",
+      "phon": "/peɪn pɔɪnt/",
       "tags": [
-        "热点",
-        "选品"
+        "营销",
+        "用户"
       ],
-      "desc": "趋势；正在上升的方向。",
-      "eg": "Ride the trend early, not late.",
-      "trans": "趁早踩趋势，别等晚了。",
-      "topic": "热点"
+      "desc": "痛点；用户真实的困扰。",
+      "eg": "Solve the user's pain point first.",
+      "trans": "先解决用户真正的痛点。",
+      "topic": "营销"
     },
     {
-      "word": "Margin",
-      "phon": "/ˈmɑːdʒɪn/",
+      "word": "Viral",
+      "phon": "/ˈvaɪrəl/",
       "tags": [
-        "电商",
-        "利润"
+        "传播",
+        "短视频"
       ],
-      "desc": "毛利；售价减成本。",
-      "eg": "Watch your margin, not just revenue.",
-      "trans": "盯紧毛利，而不只是营收。",
-      "topic": "电商"
+      "desc": "病毒式传播；自发扩散。",
+      "eg": "Make it shareable to go viral.",
+      "trans": "让它值得分享，才能病毒式传播。",
+      "topic": "传播"
+    },
+    {
+      "word": "Retention",
+      "phon": "/rɪˈtenʃn/",
+      "tags": [
+        "运营",
+        "留存"
+      ],
+      "desc": "留存；用户持续回来的比例。",
+      "eg": "Retention is cheaper than acquisition.",
+      "trans": "留存比拉新更省钱。",
+      "topic": "运营"
+    },
+    {
+      "word": "Engagement",
+      "phon": "/ɪnˈɡeɪdʒmənt/",
+      "tags": [
+        "运营",
+        "互动"
+      ],
+      "desc": "互动量；评论/点赞/转发。",
+      "eg": "Engagement beats follower count.",
+      "trans": "互动量比粉丝数更重要。",
+      "topic": "运营"
+    },
+    {
+      "word": "Call to action",
+      "phon": "/kɔːl tə ˈækʃn/",
+      "tags": [
+        "带货",
+        "文案"
+      ],
+      "desc": "行动号召；引导用户下单/关注。",
+      "eg": "End with a strong CTA.",
+      "trans": "以一句有力的行动号召收尾。",
+      "topic": "带货"
+    },
+    {
+      "word": "Serendipity",
+      "phon": "/ˌserənˈdɪpəti/",
+      "tags": [
+        "高级词汇",
+        "写作"
+      ],
+      "desc": "意外发现珍奇事物的本领；机缘巧合。",
+      "eg": "Finding this café was pure serendipity.",
+      "trans": "发现这家咖啡馆纯属机缘巧合。",
+      "topic": "高级词汇"
     }
   ],
   "news": [
@@ -160,9 +160,29 @@
         "name": "电脑线材",
         "sales": [
           {
+            "name": "编织快充数据线",
+            "plat": "1688",
+            "sales": 556860,
+            "angle": "打「耐拉不破」痛点，演示暴力弯折不坏，强调两年质保。",
+            "tags": [
+              "电脑线材",
+              "网络"
+            ]
+          },
+          {
+            "name": "千兆网线 CAT6 成品线",
+            "plat": "1688",
+            "sales": 514598,
+            "angle": "做「网速拉满」布置，强调六类线稳定低延迟，适合游戏/直播。",
+            "tags": [
+              "电脑线材",
+              "网络"
+            ]
+          },
+          {
             "name": "HDMI高清线 2.1 8K",
             "plat": "1688",
-            "sales": 597526,
+            "sales": 513459,
             "angle": "做「高清不模糊」对比，强调2.1版支持8K120Hz。",
             "tags": [
               "电脑线材",
@@ -170,20 +190,30 @@
             ]
           },
           {
-            "name": "多合一数据线",
+            "name": "编织Type-C线 240W",
             "plat": "1688",
-            "sales": 595179,
-            "angle": "做「一根走天下」场景，演示多接头适配，强调出差必备。",
+            "sales": 512264,
+            "angle": "打「大功率设备充电」场景，演示笔记本满速充，强调耐弯折。",
             "tags": [
               "电脑线材",
               "网络"
             ]
           },
           {
-            "name": "显示器连接线 DP线",
+            "name": "Type-C转Lightning线",
             "plat": "1688",
-            "sales": 519489,
-            "angle": "做「高刷显示器」布置，演示2K/4K高刷，强调画面顺滑。",
+            "sales": 459806,
+            "angle": "做「苹果用户」场景，演示快充+数据传输，强调MFi稳定。",
+            "tags": [
+              "电脑线材",
+              "网络"
+            ]
+          },
+          {
+            "name": "Type-C数据线 100W快充",
+            "plat": "1688",
+            "sales": 383862,
+            "angle": "打「一根线充电脑+手机」痛点，演示100W快充，强调编织耐拉。",
             "tags": [
               "电脑线材",
               "网络"
@@ -192,7 +222,7 @@
           {
             "name": "雷电4数据线",
             "plat": "1688",
-            "sales": 506882,
+            "sales": 195692,
             "angle": "打「高速传输」痛点，演示40Gbps传大文件，强调不掉速。",
             "tags": [
               "电脑线材",
@@ -202,7 +232,7 @@
           {
             "name": "磁吸充电线",
             "plat": "1688",
-            "sales": 477513,
+            "sales": 185956,
             "angle": "打「盲插充电」痛点，演示一碰即吸，强调不分正反。",
             "tags": [
               "电脑线材",
@@ -210,50 +240,20 @@
             ]
           },
           {
-            "name": "Type-C数据线 100W快充",
+            "name": "多合一数据线",
             "plat": "1688",
-            "sales": 447928,
-            "angle": "打「一根线充电脑+手机」痛点，演示100W快充，强调编织耐拉。",
+            "sales": 109739,
+            "angle": "做「一根走天下」场景，演示多接头适配，强调出差必备。",
             "tags": [
               "电脑线材",
               "网络"
             ]
           },
           {
-            "name": "千兆网线 CAT6 成品线",
+            "name": "显示器连接线 DP线",
             "plat": "1688",
-            "sales": 417998,
-            "angle": "做「网速拉满」布置，强调六类线稳定低延迟，适合游戏/直播。",
-            "tags": [
-              "电脑线材",
-              "网络"
-            ]
-          },
-          {
-            "name": "编织Type-C线 240W",
-            "plat": "1688",
-            "sales": 306035,
-            "angle": "打「大功率设备充电」场景，演示笔记本满速充，强调耐弯折。",
-            "tags": [
-              "电脑线材",
-              "网络"
-            ]
-          },
-          {
-            "name": "编织快充数据线",
-            "plat": "1688",
-            "sales": 231195,
-            "angle": "打「耐拉不破」痛点，演示暴力弯折不坏，强调两年质保。",
-            "tags": [
-              "电脑线材",
-              "网络"
-            ]
-          },
-          {
-            "name": "Type-C转Lightning线",
-            "plat": "1688",
-            "sales": 194924,
-            "angle": "做「苹果用户」场景，演示快充+数据传输，强调MFi稳定。",
+            "sales": 85466,
+            "angle": "做「高刷显示器」布置，演示2K/4K高刷，强调画面顺滑。",
             "tags": [
               "电脑线材",
               "网络"
@@ -262,55 +262,11 @@
         ],
         "new": [
           {
-            "name": "雷电4数据线·2026新款",
-            "plat": "1688",
-            "listedDays": 2,
-            "listedAt": "2天前",
-            "angle": "打「高速传输」痛点，演示40Gbps传大文件，强调不掉速。",
-            "tags": [
-              "电脑线材",
-              "网络"
-            ]
-          },
-          {
-            "name": "HDMI高清线 2.1 8K·2026新款",
-            "plat": "1688",
-            "listedDays": 4,
-            "listedAt": "4天前",
-            "angle": "做「高清不模糊」对比，强调2.1版支持8K120Hz。",
-            "tags": [
-              "电脑线材",
-              "网络"
-            ]
-          },
-          {
             "name": "Type-C转Lightning线·2026新款",
             "plat": "1688",
-            "listedDays": 5,
-            "listedAt": "5天前",
+            "listedDays": 3,
+            "listedAt": "3天前",
             "angle": "做「苹果用户」场景，演示快充+数据传输，强调MFi稳定。",
-            "tags": [
-              "电脑线材",
-              "网络"
-            ]
-          },
-          {
-            "name": "多合一数据线·2026新款",
-            "plat": "1688",
-            "listedDays": 5,
-            "listedAt": "5天前",
-            "angle": "做「一根走天下」场景，演示多接头适配，强调出差必备。",
-            "tags": [
-              "电脑线材",
-              "网络"
-            ]
-          },
-          {
-            "name": "千兆网线 CAT6 成品线·2026新款",
-            "plat": "1688",
-            "listedDays": 11,
-            "listedAt": "11天前",
-            "angle": "做「网速拉满」布置，强调六类线稳定低延迟，适合游戏/直播。",
             "tags": [
               "电脑线材",
               "网络"
@@ -319,9 +275,31 @@
           {
             "name": "显示器连接线 DP线·2026新款",
             "plat": "1688",
-            "listedDays": 16,
-            "listedAt": "16天前",
+            "listedDays": 3,
+            "listedAt": "3天前",
             "angle": "做「高刷显示器」布置，演示2K/4K高刷，强调画面顺滑。",
+            "tags": [
+              "电脑线材",
+              "网络"
+            ]
+          },
+          {
+            "name": "千兆网线 CAT6 成品线·2026新款",
+            "plat": "1688",
+            "listedDays": 6,
+            "listedAt": "6天前",
+            "angle": "做「网速拉满」布置，强调六类线稳定低延迟，适合游戏/直播。",
+            "tags": [
+              "电脑线材",
+              "网络"
+            ]
+          },
+          {
+            "name": "编织快充数据线·2026新款",
+            "plat": "1688",
+            "listedDays": 11,
+            "listedAt": "11天前",
+            "angle": "打「耐拉不破」痛点，演示暴力弯折不坏，强调两年质保。",
             "tags": [
               "电脑线材",
               "网络"
@@ -330,9 +308,42 @@
           {
             "name": "Type-C数据线 100W快充·2026新款",
             "plat": "1688",
+            "listedDays": 12,
+            "listedAt": "12天前",
+            "angle": "打「一根线充电脑+手机」痛点，演示100W快充，强调编织耐拉。",
+            "tags": [
+              "电脑线材",
+              "网络"
+            ]
+          },
+          {
+            "name": "多合一数据线·2026新款",
+            "plat": "1688",
+            "listedDays": 13,
+            "listedAt": "13天前",
+            "angle": "做「一根走天下」场景，演示多接头适配，强调出差必备。",
+            "tags": [
+              "电脑线材",
+              "网络"
+            ]
+          },
+          {
+            "name": "编织Type-C线 240W·2026新款",
+            "plat": "1688",
+            "listedDays": 15,
+            "listedAt": "15天前",
+            "angle": "打「大功率设备充电」场景，演示笔记本满速充，强调耐弯折。",
+            "tags": [
+              "电脑线材",
+              "网络"
+            ]
+          },
+          {
+            "name": "HDMI高清线 2.1 8K·2026新款",
+            "plat": "1688",
             "listedDays": 21,
             "listedAt": "21天前",
-            "angle": "打「一根线充电脑+手机」痛点，演示100W快充，强调编织耐拉。",
+            "angle": "做「高清不模糊」对比，强调2.1版支持8K120Hz。",
             "tags": [
               "电脑线材",
               "网络"
@@ -350,22 +361,11 @@
             ]
           },
           {
-            "name": "编织Type-C线 240W·2026新款",
+            "name": "雷电4数据线·2026新款",
             "plat": "1688",
-            "listedDays": 23,
-            "listedAt": "23天前",
-            "angle": "打「大功率设备充电」场景，演示笔记本满速充，强调耐弯折。",
-            "tags": [
-              "电脑线材",
-              "网络"
-            ]
-          },
-          {
-            "name": "编织快充数据线·2026新款",
-            "plat": "1688",
-            "listedDays": 25,
-            "listedAt": "25天前",
-            "angle": "打「耐拉不破」痛点，演示暴力弯折不坏，强调两年质保。",
+            "listedDays": 22,
+            "listedAt": "22天前",
+            "angle": "打「高速传输」痛点，演示40Gbps传大文件，强调不掉速。",
             "tags": [
               "电脑线材",
               "网络"
@@ -382,10 +382,10 @@
         "name": "电脑线材",
         "sales": [
           {
-            "name": "Magnetic Charging Cable",
+            "name": "Type C to Lightning Cable",
             "plat": "阿里国际站",
-            "sales": 492564,
-            "angle": "Blind-plug charge pain, magnetic snap, no orientation.",
+            "sales": 561913,
+            "angle": "Apple user scene, fast charge + data, stable.",
             "tags": [
               "Cable",
               "Network"
@@ -394,48 +394,8 @@
           {
             "name": "DisplayPort Cable",
             "plat": "阿里国际站",
-            "sales": 476365,
+            "sales": 536423,
             "angle": "High-refresh monitor setup, 2K/4K high Hz, smooth.",
-            "tags": [
-              "Cable",
-              "Network"
-            ]
-          },
-          {
-            "name": "Braided Fast Charge Cable",
-            "plat": "阿里国际站",
-            "sales": 399534,
-            "angle": "Tug-proof pain, violent bend no break, 2-year warranty.",
-            "tags": [
-              "Cable",
-              "Network"
-            ]
-          },
-          {
-            "name": "Braided Type C Cable 240W",
-            "plat": "阿里国际站",
-            "sales": 257148,
-            "angle": "High-power device charge, laptop full-speed, bend-proof.",
-            "tags": [
-              "Cable",
-              "Network"
-            ]
-          },
-          {
-            "name": "Type C to Lightning Cable",
-            "plat": "阿里国际站",
-            "sales": 243550,
-            "angle": "Apple user scene, fast charge + data, stable.",
-            "tags": [
-              "Cable",
-              "Network"
-            ]
-          },
-          {
-            "name": "Cat6 Ethernet Cable",
-            "plat": "阿里国际站",
-            "sales": 159587,
-            "angle": "Full-speed network setup, Cat6 stable low latency for gaming.",
             "tags": [
               "Cable",
               "Network"
@@ -444,7 +404,7 @@
           {
             "name": "Multi-in-1 Charging Cable",
             "plat": "阿里国际站",
-            "sales": 142027,
+            "sales": 505428,
             "angle": "One cable for all, multi-head adapter, travel must-have.",
             "tags": [
               "Cable",
@@ -454,18 +414,8 @@
           {
             "name": "Thunderbolt 4 Cable",
             "plat": "阿里国际站",
-            "sales": 128012,
+            "sales": 484861,
             "angle": "High-speed transfer pain, 40Gbps big files, no drop.",
-            "tags": [
-              "Cable",
-              "Network"
-            ]
-          },
-          {
-            "name": "Type C Cable 100W Fast Charge",
-            "plat": "阿里国际站",
-            "sales": 110440,
-            "angle": "One cable charges laptop+phone, 100W demo, braided.",
             "tags": [
               "Cable",
               "Network"
@@ -474,8 +424,58 @@
           {
             "name": "HDMI 2.1 Cable 8K",
             "plat": "阿里国际站",
-            "sales": 39105,
+            "sales": 403243,
             "angle": "HD clear compare, 2.1 supports 8K120Hz.",
+            "tags": [
+              "Cable",
+              "Network"
+            ]
+          },
+          {
+            "name": "Braided Fast Charge Cable",
+            "plat": "阿里国际站",
+            "sales": 323205,
+            "angle": "Tug-proof pain, violent bend no break, 2-year warranty.",
+            "tags": [
+              "Cable",
+              "Network"
+            ]
+          },
+          {
+            "name": "Cat6 Ethernet Cable",
+            "plat": "阿里国际站",
+            "sales": 285978,
+            "angle": "Full-speed network setup, Cat6 stable low latency for gaming.",
+            "tags": [
+              "Cable",
+              "Network"
+            ]
+          },
+          {
+            "name": "Type C Cable 100W Fast Charge",
+            "plat": "阿里国际站",
+            "sales": 151957,
+            "angle": "One cable charges laptop+phone, 100W demo, braided.",
+            "tags": [
+              "Cable",
+              "Network"
+            ]
+          },
+          {
+            "name": "Braided Type C Cable 240W",
+            "plat": "阿里国际站",
+            "sales": 149478,
+            "angle": "High-power device charge, laptop full-speed, bend-proof.",
+            "tags": [
+              "Cable",
+              "Network"
+            ]
+          },
+          {
+            "name": "Magnetic Charging Cable",
+            "plat": "阿里国际站",
+            "sales": 85222,
+            "angle": "Blind-plug charge pain, magnetic snap, no orientation.",
             "tags": [
               "Cable",
               "Network"
@@ -484,11 +484,33 @@
         ],
         "new": [
           {
-            "name": "Type C Cable 100W Fast Charge 2026 New",
+            "name": "Multi-in-1 Charging Cable 2026 New",
             "plat": "阿里国际站",
             "listedDays": 0,
             "listedAt": "今天",
-            "angle": "One cable charges laptop+phone, 100W demo, braided.",
+            "angle": "One cable for all, multi-head adapter, travel must-have.",
+            "tags": [
+              "Cable",
+              "Network"
+            ]
+          },
+          {
+            "name": "DisplayPort Cable 2026 New",
+            "plat": "阿里国际站",
+            "listedDays": 4,
+            "listedAt": "4天前",
+            "angle": "High-refresh monitor setup, 2K/4K high Hz, smooth.",
+            "tags": [
+              "Cable",
+              "Network"
+            ]
+          },
+          {
+            "name": "HDMI 2.1 Cable 8K 2026 New",
+            "plat": "阿里国际站",
+            "listedDays": 6,
+            "listedAt": "6天前",
+            "angle": "HD clear compare, 2.1 supports 8K120Hz.",
             "tags": [
               "Cable",
               "Network"
@@ -497,8 +519,8 @@
           {
             "name": "Thunderbolt 4 Cable 2026 New",
             "plat": "阿里国际站",
-            "listedDays": 0,
-            "listedAt": "今天",
+            "listedDays": 6,
+            "listedAt": "6天前",
             "angle": "High-speed transfer pain, 40Gbps big files, no drop.",
             "tags": [
               "Cable",
@@ -508,53 +530,9 @@
           {
             "name": "Cat6 Ethernet Cable 2026 New",
             "plat": "阿里国际站",
-            "listedDays": 3,
-            "listedAt": "3天前",
+            "listedDays": 7,
+            "listedAt": "7天前",
             "angle": "Full-speed network setup, Cat6 stable low latency for gaming.",
-            "tags": [
-              "Cable",
-              "Network"
-            ]
-          },
-          {
-            "name": "Braided Type C Cable 240W 2026 New",
-            "plat": "阿里国际站",
-            "listedDays": 5,
-            "listedAt": "5天前",
-            "angle": "High-power device charge, laptop full-speed, bend-proof.",
-            "tags": [
-              "Cable",
-              "Network"
-            ]
-          },
-          {
-            "name": "DisplayPort Cable 2026 New",
-            "plat": "阿里国际站",
-            "listedDays": 7,
-            "listedAt": "7天前",
-            "angle": "High-refresh monitor setup, 2K/4K high Hz, smooth.",
-            "tags": [
-              "Cable",
-              "Network"
-            ]
-          },
-          {
-            "name": "Magnetic Charging Cable 2026 New",
-            "plat": "阿里国际站",
-            "listedDays": 7,
-            "listedAt": "7天前",
-            "angle": "Blind-plug charge pain, magnetic snap, no orientation.",
-            "tags": [
-              "Cable",
-              "Network"
-            ]
-          },
-          {
-            "name": "Type C to Lightning Cable 2026 New",
-            "plat": "阿里国际站",
-            "listedDays": 12,
-            "listedAt": "12天前",
-            "angle": "Apple user scene, fast charge + data, stable.",
             "tags": [
               "Cable",
               "Network"
@@ -563,8 +541,8 @@
           {
             "name": "Braided Fast Charge Cable 2026 New",
             "plat": "阿里国际站",
-            "listedDays": 17,
-            "listedAt": "17天前",
+            "listedDays": 7,
+            "listedAt": "7天前",
             "angle": "Tug-proof pain, violent bend no break, 2-year warranty.",
             "tags": [
               "Cable",
@@ -572,22 +550,44 @@
             ]
           },
           {
-            "name": "HDMI 2.1 Cable 8K 2026 New",
+            "name": "Magnetic Charging Cable 2026 New",
             "plat": "阿里国际站",
-            "listedDays": 20,
-            "listedAt": "20天前",
-            "angle": "HD clear compare, 2.1 supports 8K120Hz.",
+            "listedDays": 8,
+            "listedAt": "8天前",
+            "angle": "Blind-plug charge pain, magnetic snap, no orientation.",
             "tags": [
               "Cable",
               "Network"
             ]
           },
           {
-            "name": "Multi-in-1 Charging Cable 2026 New",
+            "name": "Braided Type C Cable 240W 2026 New",
             "plat": "阿里国际站",
-            "listedDays": 22,
-            "listedAt": "22天前",
-            "angle": "One cable for all, multi-head adapter, travel must-have.",
+            "listedDays": 9,
+            "listedAt": "9天前",
+            "angle": "High-power device charge, laptop full-speed, bend-proof.",
+            "tags": [
+              "Cable",
+              "Network"
+            ]
+          },
+          {
+            "name": "Type C to Lightning Cable 2026 New",
+            "plat": "阿里国际站",
+            "listedDays": 13,
+            "listedAt": "13天前",
+            "angle": "Apple user scene, fast charge + data, stable.",
+            "tags": [
+              "Cable",
+              "Network"
+            ]
+          },
+          {
+            "name": "Type C Cable 100W Fast Charge 2026 New",
+            "plat": "阿里国际站",
+            "listedDays": 17,
+            "listedAt": "17天前",
+            "angle": "One cable charges laptop+phone, 100W demo, braided.",
             "tags": [
               "Cable",
               "Network"
@@ -599,260 +599,260 @@
   },
   "funds": [
     {
-      "name": "景顺长城新兴成长混合",
-      "code": "260108",
-      "inflow": 11.8,
-      "change": -0.68
+      "name": "睿远成长价值混合A",
+      "code": "007119",
+      "inflow": 12.6,
+      "change": 1.9
+    },
+    {
+      "name": "易方达消费行业股票",
+      "code": "110022",
+      "inflow": 12.5,
+      "change": 1.33
     },
     {
       "name": "富国天惠成长混合(LOF)",
       "code": "161005",
-      "inflow": 9.5,
-      "change": -1.28
+      "inflow": 12.3,
+      "change": 0.68
     },
     {
-      "name": "招商中证白酒指数(LOF)",
-      "code": "161725",
-      "inflow": 9.1,
-      "change": -0.49
+      "name": "易方达蓝筹精选混合",
+      "code": "005827",
+      "inflow": 11.3,
+      "change": 2.21
+    },
+    {
+      "name": "诺安成长混合",
+      "code": "320007",
+      "inflow": 10.8,
+      "change": 1.22
+    },
+    {
+      "name": "中欧医疗健康混合A",
+      "code": "003095",
+      "inflow": 8.5,
+      "change": 0.83
+    },
+    {
+      "name": "景顺长城新兴成长混合",
+      "code": "260108",
+      "inflow": 8.4,
+      "change": 2.6
     },
     {
       "name": "华夏成长混合",
       "code": "000001",
       "inflow": 8.0,
-      "change": 2.55
-    },
-    {
-      "name": "易方达蓝筹精选混合",
-      "code": "005827",
-      "inflow": 7.4,
-      "change": 2.37
-    },
-    {
-      "name": "诺安成长混合",
-      "code": "320007",
-      "inflow": 7.1,
-      "change": -0.5
-    },
-    {
-      "name": "中欧医疗健康混合A",
-      "code": "003095",
-      "inflow": 6.4,
-      "change": 2.72
+      "change": -0.69
     },
     {
       "name": "兴全合宜混合(LOF)",
       "code": "163417",
-      "inflow": 6.2,
-      "change": 2.6
+      "inflow": 6.0,
+      "change": -1.33
     },
     {
-      "name": "易方达消费行业股票",
-      "code": "110022",
-      "inflow": 3.6,
-      "change": -1.1
-    },
-    {
-      "name": "睿远成长价值混合A",
-      "code": "007119",
-      "inflow": 2.7,
-      "change": 2.1
+      "name": "招商中证白酒指数(LOF)",
+      "code": "161725",
+      "inflow": 2.9,
+      "change": 1.96
     }
   ],
   "stocks": [
     {
-      "name": "立讯精密",
-      "code": "002475",
-      "inflow": 11.7,
-      "change": 1.31,
-      "price": 890.43
-    },
-    {
-      "name": "北方华创",
-      "code": "002371",
-      "inflow": 11.4,
-      "change": 1.56,
-      "price": 500.63
-    },
-    {
-      "name": "宁德时代",
-      "code": "300750",
-      "inflow": 10.9,
-      "change": 0.34,
-      "price": 861.95
+      "name": "隆基绿能",
+      "code": "601012",
+      "inflow": 12.5,
+      "change": 2.97,
+      "price": 91.1
     },
     {
       "name": "中国中免",
       "code": "601888",
-      "inflow": 6.4,
-      "change": 2.04,
-      "price": 692.73
-    },
-    {
-      "name": "贵州茅台",
-      "code": "600519",
-      "inflow": 5.9,
-      "change": 1.51,
-      "price": 1325.02
-    },
-    {
-      "name": "科大讯飞",
-      "code": "002230",
-      "inflow": 5.7,
-      "change": 1.26,
-      "price": 453.3
-    },
-    {
-      "name": "隆基绿能",
-      "code": "601012",
-      "inflow": 5.6,
-      "change": -1.14,
-      "price": 839.84
-    },
-    {
-      "name": "比亚迪",
-      "code": "002594",
-      "inflow": 4.9,
-      "change": 2.99,
-      "price": 684.23
+      "inflow": 12.5,
+      "change": -1.45,
+      "price": 500.29
     },
     {
       "name": "招商银行",
       "code": "600036",
-      "inflow": 4.7,
-      "change": -0.89,
-      "price": 1564.23
+      "inflow": 12.4,
+      "change": 1.61,
+      "price": 380.25
     },
     {
       "name": "中芯国际",
       "code": "688981",
-      "inflow": 2.7,
-      "change": -1.36,
-      "price": 631.72
+      "inflow": 12.1,
+      "change": 0.07,
+      "price": 1320.23
+    },
+    {
+      "name": "贵州茅台",
+      "code": "600519",
+      "inflow": 11.7,
+      "change": 0.69,
+      "price": 1642.43
+    },
+    {
+      "name": "北方华创",
+      "code": "002371",
+      "inflow": 8.2,
+      "change": 2.36,
+      "price": 570.67
+    },
+    {
+      "name": "宁德时代",
+      "code": "300750",
+      "inflow": 7.9,
+      "change": -0.68,
+      "price": 716.13
+    },
+    {
+      "name": "比亚迪",
+      "code": "002594",
+      "inflow": 7.9,
+      "change": 2.26,
+      "price": 1027.36
+    },
+    {
+      "name": "立讯精密",
+      "code": "002475",
+      "inflow": 7.9,
+      "change": 2.68,
+      "price": 942.74
+    },
+    {
+      "name": "科大讯飞",
+      "code": "002230",
+      "inflow": 2.2,
+      "change": 0.84,
+      "price": 1493.71
     }
   ],
   "etfs": [
     {
-      "name": "军工ETF",
-      "code": "512660",
-      "inflow": 9.8,
-      "change": 0.77
+      "name": "沪深300ETF",
+      "code": "510300",
+      "inflow": 11.4,
+      "change": 0.19
     },
     {
       "name": "创业板ETF",
       "code": "159915",
-      "inflow": 9.5,
-      "change": 2.27
+      "inflow": 9.7,
+      "change": -0.56
     },
     {
-      "name": "科创50ETF",
-      "code": "588000",
-      "inflow": 8.8,
-      "change": 0.52
-    },
-    {
-      "name": "新能源车ETF",
-      "code": "515030",
-      "inflow": 8.8,
-      "change": 2.68
-    },
-    {
-      "name": "券商ETF",
-      "code": "512000",
-      "inflow": 8.5,
-      "change": 0.97
+      "name": "黄金ETF",
+      "code": "518880",
+      "inflow": 8.4,
+      "change": -0.4
     },
     {
       "name": "中证500ETF",
       "code": "510500",
-      "inflow": 8.3,
-      "change": 2.36
+      "inflow": 7.9,
+      "change": 1.45
+    },
+    {
+      "name": "科创50ETF",
+      "code": "588000",
+      "inflow": 7.5,
+      "change": -0.12
     },
     {
       "name": "纳指ETF",
       "code": "513100",
       "inflow": 7.2,
-      "change": 0.45
-    },
-    {
-      "name": "黄金ETF",
-      "code": "518880",
-      "inflow": 6.4,
-      "change": -0.0
+      "change": 1.16
     },
     {
       "name": "半导体ETF",
       "code": "512760",
-      "inflow": 5.8,
-      "change": -1.13
+      "inflow": 6.7,
+      "change": -0.33
     },
     {
-      "name": "沪深300ETF",
-      "code": "510300",
-      "inflow": 2.9,
-      "change": -0.35
+      "name": "军工ETF",
+      "code": "512660",
+      "inflow": 5.8,
+      "change": 1.72
+    },
+    {
+      "name": "券商ETF",
+      "code": "512000",
+      "inflow": 5.7,
+      "change": -0.97
+    },
+    {
+      "name": "新能源车ETF",
+      "code": "515030",
+      "inflow": 4.0,
+      "change": 2.91
     }
   ],
   "sectors": [
     {
       "name": "半导体",
       "code": "",
-      "inflow": 5.5,
-      "change": -0.7
+      "inflow": 6.1,
+      "change": 1.58
     },
     {
       "name": "新能源",
       "code": "",
-      "inflow": 16.1,
-      "change": 2.07
+      "inflow": 8.5,
+      "change": 3.67
     },
     {
       "name": "白酒",
       "code": "",
-      "inflow": 18.4,
-      "change": 2.54
+      "inflow": 4.2,
+      "change": 2.97
     },
     {
       "name": "医药",
       "code": "",
-      "inflow": 16.1,
-      "change": 3.05
+      "inflow": 4.6,
+      "change": -1.77
     },
     {
       "name": "军工",
       "code": "",
-      "inflow": 3.8,
-      "change": 2.03
+      "inflow": 19.4,
+      "change": 3.53
     },
     {
       "name": "证券",
       "code": "",
-      "inflow": 7.3,
-      "change": -0.17
+      "inflow": 16.8,
+      "change": 0.78
     },
     {
       "name": "光伏",
       "code": "",
-      "inflow": 8.0,
-      "change": -0.92
+      "inflow": 14.5,
+      "change": 2.62
     },
     {
       "name": "消费电子",
       "code": "",
-      "inflow": 18.7,
-      "change": 0.23
+      "inflow": 5.9,
+      "change": 2.82
     },
     {
       "name": "人工智能",
       "code": "",
-      "inflow": 15.6,
+      "inflow": 18.6,
       "change": -0.42
     },
     {
       "name": "储能",
       "code": "",
-      "inflow": 11.9,
-      "change": 3.71
+      "inflow": 14.6,
+      "change": 3.17
     }
   ],
   "buffett": {
